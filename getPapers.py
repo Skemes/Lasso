@@ -5,9 +5,9 @@ import pattern.en
 import numpy as np
 
 START_YEAR_DATE = 2010
-MAX_NUM_PAGES = 15
+MAX_NUM_PAGES = 50
 NOUNS = ['NN', 'NP', 'NNS', 'JJ']
-MAX_EXTRA_KWs = 10
+MAX_EXTRA_KWs = 15
 
 
 def splitUnicodeData(charList, char):
@@ -73,9 +73,6 @@ def getNounListFromScholar(catList, interestList):
 	for k, v in wordDict.iteritems():
 		if(v <= avg): nounList.append(k)
 
-	print nounList
-
-
 	#Now that we have our keywords, let's take these and use them in a custom Google Scholar Search
 	myKWSearch = scholar.SearchScholarQuery()
 	myKWSearch.set_words(interestList)
@@ -105,8 +102,10 @@ def getNounListFromScholar(catList, interestList):
 				if cluster in titleClusters: titleClusters[cluster] += [title]
 				else: titleClusters[cluster] = [title]
 
-	
-	print titleClusters
+	print "Possible Research Collaborator Papers"
+	for key, value in titleClusters.iteritems():
+		print "Cluster Key: ", key
+		for v in value: print "Title: ", v 
 	return 0
 			
 		
@@ -114,6 +113,7 @@ def getNounListFromScholar(catList, interestList):
 
 def main():
 #1) Find nouns associated with Category of interest
+#TO TRY OUT YOURSELF: Substitute "Neural Network" for your research area, and "bacteria" for words of interest. These can be a list of words as well!
 	getNounListFromScholar(["Neural Network"], ["bacteria"])
 
 	return 0

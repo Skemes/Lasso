@@ -1,3 +1,14 @@
+Welcome to Lasso!
+
+In order to run the basic code to fetch clusters for websites given research topics, employ the following code:
+
+getPapers.py.
+
+In the 'main' section, go to the "TO TRY OUT" comment for a description to see what kind of output is provided by using Google Scholar for custom searches with this method. Essentially, this is providing a 2-level search. In the first level, the researcher's research goals are converted to simple applications, which are then combined with research interests to generate titles of possible collaboration papers, grouped by cluster ID. These clusters are Google Scholar's, and can be used to expand the search further.
+
+This code is primarily employing scholar.py, as detailed below.
+
+
 scholar.py
 ==========
 
