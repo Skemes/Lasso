@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="tableSorter.css" media="screen" />
+</head>
+
+<body>
+ <div id="wrapper">
+  <h1>Your Collaboration Suggestions</h1>
+  
+  <table id="keywords" cellspacing="0" cellpadding="0">
+    <thead>
+      <tr>
+        <th><span>Topic</span></th>
+        <th><span>PI</span></th>
+        <th><span>PI Collaboration Ranking (1-100)</span></th>
+        <th><span>PI Funding Ranking (1-100)</span></th>
+        <th><span>PI Maturity Ranking (1-100)</span></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td class="lalign">Cancer Genetics</td>
+        <td>Sue Pensworth</td>
+        <td>22</td>
+        <td>65</td>
+        <td>77</td>
+      </tr>
+      <tr>
+        <td class="lalign">Nematode Senescence</td>
+        <td>Stephen Hawking</td>
+        <td>5</td>
+        <td>99</td>
+        <td>100</td>
+      </tr>
+      <tr>
+        <td class="lalign">Microbial Ecology</td>
+        <td>Theodore Booksworth</td>
+        <td>85</td>
+        <td>22</td>
+        <td>16</td>
+      </tr>
+      <tr>
+        <td class="lalign">Gene Regulatory Networks</td>
+        <td>Roland Sperling</td>
+        <td>12</td>
+        <td>16</td>
+        <td>19</td>
+      </tr>
+      <tr>
+        <td class="lalign">Theoretical Astronomy</td>
+        <td>Samuel Clemens</td>
+        <td>88</td>
+        <td>25</td>
+        <td>53</td>
+      </tr>
+      <tr>
+        <td class="lalign">Microbial Ecology</td>
+        <td>Frank Shiller</td>
+        <td>10</td>
+        <td>27</td>
+        <td>8</td>
+      </tr>
+    </tbody>
+  </table>
+ </div>
+
+<script type="text/javascript" src="jquery-1.11.3.js"></script> 
+<script src="http://tablesorter.com/__jquery.tablesorter.min.js"></script>
+
+<script>
+$(function () {
+    $('#keywords').tablesorter();
+});
+//@ sourceURL=pen.js
+</script>
+
+</body>
+
+</html>
